@@ -12,4 +12,5 @@ git reflog //查看命令历史，可以查看回退前版本号
 git checkout -- readme.txt //把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
 						   //一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
 					       //一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+git checkout //用版本库里的版本替换工作区的版本
 git reset HEAD readme.txt //可以把readme.txt在暂存区的修改撤销掉，重新放回工作区
