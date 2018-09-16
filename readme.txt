@@ -5,7 +5,7 @@ git status  //查看被修改的文件
 git diff  //查看修改内容
 git diff HEAD -- readme.txt  //查看readme.txt工作区和版本库里最新版本的区别
 git log  //查看提交历史（head是当前版本）
-git log --pretty=oneline  //仅显示版本号和说明
+git log --pretty=oneline  //查看提交历史（一行显示）
 git reset --hard HEAD^  //回退到上一个版本，HEAD^^为上上个版本，HEAD~100为上100个版本
 git reset --hard + commit_id（版本号） //版本号没必要写全，前几位就可以，git会自动去找（前5位即可）
 git reflog  //查看命令历史，可以查看回退前版本号
@@ -26,5 +26,13 @@ git checkout -b <name>  //创建+切换分支
 git merge <name>  //合并某分支到当前分支
 git branch -d <name>  //删除分支
 
-Creating a new branch is quick and simple.
+<<<<<<< HEAD
+Creating a new branch is quick & simple.
+=======
+Creating a new branch is quick AND simple.
+>>>>>>> feature
 
+<<<<<<<，=======，>>>>>>>标记出不同分支的内容，对分支冲突内容进行修改然后再次提交
+
+git log --graph  //查看分支合并图
+git merge --no-ff -m "这里是提交说明" <name>  //合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支
