@@ -18,3 +18,10 @@ git rm test.txt  //从版本库中删除test.txt文件，并且要执行git comm
 git remote add origin git@github.com:xiehongtao1224/learngit.git  //关联xiehongtao1224/learngit.git的远程库
 git push -u origin master  //第一次推送master分支的所有内容到远程库
 git push origin master  //第一次之后，推送最新修改到远程库
+git clone git@github.com:xiehongtao1224/learngit.git  //克隆xiehongtao1224/learngit.git远程库到本地
+git branch  //查看分支
+git branch <name>  //创建分支
+git checkout <name>  //切换分支
+git checkout -b <name>  //创建+切换分支
+git merge <name>  //合并某分支到当前分支
+git branch -d <name>  //删除分支
